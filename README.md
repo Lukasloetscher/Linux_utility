@@ -1,2 +1,2 @@
 # Linux_utility
-Scripts icreated for linux that make my life easier
+Scripts i use to make my life easier
