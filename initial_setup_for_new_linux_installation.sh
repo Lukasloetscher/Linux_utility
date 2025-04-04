@@ -33,6 +33,6 @@ echo "please paste the pub key into github."
 #git set up.
 git config --global user.name "Lukas Loetscher"
 git config --global user.email "Lukas@Loetscher.swiss"
-
-
+#makes it teh default that git wants to merge stuff in case of missing changes.
+git config pull.rebase false 
 
