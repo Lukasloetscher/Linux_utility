@@ -30,6 +30,9 @@ ssh-keygen -t ed25519 -C "lukas@loetscher.swiss" -f /home/$USER/.ssh/github_ssh_
 cp /home/$USER/.ssh/github_ssh_key.pub /home/$USER/Desktop/ssh_key_for_github.pub
 echo "please paste the pub key into github."
 
+#git set up.
+git config --global user.name "Lukas Loetscher"
+git config --global user.email "Lukas@Loetscher.swiss"
 
 
 
