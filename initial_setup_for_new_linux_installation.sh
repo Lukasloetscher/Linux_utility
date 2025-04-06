@@ -1,3 +1,5 @@
+#!/bin/bash
+
 apt update
 apt install snapd -y
 snap install eclipse --classic
@@ -23,6 +25,8 @@ apt install golang -y
 code --install-extension golang.go
 code --install-extension ms-azuretools.vscode-docker
 code --install-extension ms-vscode.cpptools
+code --install-extension foxundermoon.shell-format
+
 
 apt install docker.io -y
 
