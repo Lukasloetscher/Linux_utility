@@ -68,12 +68,12 @@
         }
 
         func_go(){
-            echo start wit go setup'
+            echo start wit go setup
             apt install golang -y
         }
 
         func_Docker(){
-            echo 'start with docker setup^
+            echo 'start with docker setup'
             apt install docker.io -y
 
             #setting docker access. needed to be used with vscode.
@@ -85,7 +85,7 @@
                     #git set up.
                     sudo -u $SUDO_USER bash -c "git config --global user.name "Lukas Loetscher""
                     sudo -u $SUDO_USER bash -c "git config --global user.email "Lukas@Loetscher.swiss""
-                    #makes it teh default that git wants to merge stuff in case of missing changes.
+                    #makes it the default that git wants to merge stuff in case of missing changes.
                     sudo -u $SUDO_USER bash -c "git config pull.rebase false"
                 }
 
