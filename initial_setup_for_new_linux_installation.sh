@@ -11,6 +11,7 @@
         }
 
         func_AptBasics(){
+            echo 'apt update'
             apt update
             apt upgrade -y
             apt install snapd -y
@@ -42,6 +43,7 @@
                 } 
 
         func_javaSetup(){
+            echo 'start with Java setup'
             func_javaSetupIDE
             func_javaSetuputility
         }
@@ -57,15 +59,18 @@
                 }
 
         func_vscode(){
+            echo 'start with vscode setupt'
             apt install code -y
             func_vscodeExtensions
         }
 
         func_go(){
+            echo start wit go setup'
             apt install golang -y
         }
 
         func_Docker(){
+            echo 'start with docker setup^
             apt install docker.io -y
 
             #setting docker access. needed to be used with vscode.
@@ -88,6 +93,7 @@
                 }
 
         func_GIT(){
+            echo 'start with git setup'
             #git is installed as a standart, however there are some settings needed.
             func_GitSettings
             func_GIT_SSHKeyForGithub
