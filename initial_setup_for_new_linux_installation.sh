@@ -28,12 +28,12 @@
                     apt install openjdk-17-jdk -y
                     apt install maven -y
 
-                    func_javaSetUpProfile()
+                    func_javaSetUpProfile
                 } 
 
         func_javaSetup(){
-            func_javaSetupIDE()
-            func_javaSetuputility()
+            func_javaSetupIDE
+            func_javaSetuputility
         }
 
 
@@ -48,7 +48,7 @@
 
         func_vscode(){
             apt install code -y
-            func_vscodeExtensions()
+            func_vscodeExtensions
         }
 
         func_go(){
@@ -79,19 +79,19 @@
 
         func_GIT(){
             #git is installed as a standart, however there are some settings needed.
-            func_GitSettings()
-            func_GIT_SSHKeyForGithub()
+            func_GitSettings
+            func_GIT_SSHKeyForGithub
         }
 
 #THIS IS WHERE THE CODE STARTS!
 
-func_AptBasics()
-func_vmBox()
-func_javaSetup()
-func_go()
-func_vscode()
-func_Docker()
-func_GIT()
+func_AptBasics
+func_vmBox
+func_javaSetup
+func_go
+func_vscode
+func_Docker
+func_GIT
 
 #last we want to reboot the device.
 reboot now
