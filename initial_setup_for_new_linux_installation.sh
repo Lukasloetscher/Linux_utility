@@ -30,9 +30,9 @@
                 }
 
                 func_javaSetUpProfile(){
-                    echo '' >> ~/.profile
-                    echo '# >>> Java & Maven environment variables >>>' >> ~/.profile
-                    echo 'export Jusermod -aG docker $SUDO_USER'
+                    sudo -u $SUDO_USER bash -c "echo '' >> ~/.profile"
+                    sudo -u $SUDO_USER bash -c "echo '# >>> Java & Maven environment variables >>>' >> ~/.profile"
+                    export Jusermod -aG docker $SUDO_USER
                 }
 
                 func_javaSetuputility(){
@@ -50,10 +50,10 @@
 
 
                 func_vscodeExtensions(){ #Those are grouped together here, since they are dependent on vscode beeing installed. Even so there could be an argument, that they should be under their respective tools.
-                    code --install-extension golang.go
-                    code --install-extension ms-azuretools.vscode-docker
-                    code --install-extension ms-vscode.cpptools
-                    code --install-extension foxundermoon.shell-format
+                    sudo -u $SUDO_USER code --install-extension golang.go
+                    sudo -u $SUDO_USER code --install-extension ms-azuretools.vscode-docker
+                    sudo -u $SUDO_USER code --install-extension ms-vscode.cpptools
+                    sudo -u $SUDO_USER code --install-extension foxundermoon.shell-format
 
 
                 }
@@ -80,10 +80,10 @@
 
                 func_GitSettings(){
                     #git set up.
-                    git config --global user.name "Lukas Loetscher"
-                    git config --global user.email "Lukas@Loetscher.swiss"
+                    sudo -u $SUDO_USER git config --global user.name "Lukas Loetscher"
+                    sudo -u $SUDO_USER git config --global user.email "Lukas@Loetscher.swiss"
                     #makes it teh default that git wants to merge stuff in case of missing changes.
-                    git config pull.rebase false 
+                    sudo -u $SUDO_USER git config pull.rebase false 
                 }
 
                 func_GIT_SSHKeyForGithub(){
