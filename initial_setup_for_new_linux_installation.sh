@@ -2,6 +2,7 @@
 
         func_AptBasics(){
             apt update
+            apt upgrade -y
             apt install snapd -y
         }
 
