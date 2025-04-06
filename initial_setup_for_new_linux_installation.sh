@@ -90,7 +90,7 @@
                 }
 
                 func_GIT_SSHKeyForGithub(){
-                    sudo -u $SUDO_USER bash -c "ssh-keygen -t ed25519 -C 'lukas@loetscher.swiss' -f /home/$USER/.ssh/github_ssh_key -N ''"
+                    sudo -u $SUDO_USER bash -c "ssh-keygen -t ed25519 -C 'lukas@loetscher.swiss' -f /home/$SUDO_USER/.ssh/github_ssh_key -N ''"
                     cp /home/$SUDO_USER/.ssh/github_ssh_key.pub /home/$SUDO_USER/Desktop/ssh_key_for_github.pub
                     echo "please paste the pub key into github."
                 }
