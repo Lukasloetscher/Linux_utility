@@ -1,5 +1,15 @@
 #!/usr/bin/bash
 
+        func_checkInput(){
+            if [ "$EUID" -ne 0 ]
+                then echo "Please run this as root."
+                echo "You can do this by simply typing the following"
+                echo "sudo !!"
+                exit
+            fi
+
+        }
+
         func_AptBasics(){
             apt update
             apt upgrade -y
@@ -21,7 +31,7 @@
                 func_javaSetUpProfile(){
                     echo '' >> ~/.profile
                     echo '# >>> Java & Maven environment variables >>>' >> ~/.profile
-                    echo 'export Jusermod -aG docker $USER'
+                    echo 'export Jusermod -aG docker $SUDO_USER'
                 }
 
                 func_javaSetuputility(){
@@ -59,7 +69,7 @@
             apt install docker.io -y
 
             #setting docker access. needed to be used with vscode.
-            usermod -aG docker $USER
+            usermod -aG docker $SUDO_USER
 
         }
 
@@ -72,8 +82,8 @@
                 }
 
                 func_GIT_SSHKeyForGithub(){
-                    ssh-keygen -t ed25519 -C "lukas@loetscher.swiss" -f /home/$USER/.ssh/github_ssh_key -N ""
-                    p /home/$USER/.ssh/github_ssh_key.pub /home/$USER/Desktop/ssh_key_for_github.pub
+                    ssh-keygen -t ed25519 -C "lukas@loetscher.swiss" -f /home/$SUDO_USER/.ssh/github_ssh_key -N ""
+                    p /home/$SUDO_USER/.ssh/github_ssh_key.pub /home/$SUDO_USER/Desktop/ssh_key_for_github.pub
                     cho "please paste the pub key into github."
                 }
 
@@ -84,6 +94,8 @@
         }
 
 #THIS IS WHERE THE CODE STARTS!
+
+func_checkInput
 
 func_AptBasics
 func_vmBox
