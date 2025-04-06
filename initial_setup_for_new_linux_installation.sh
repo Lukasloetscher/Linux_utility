@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/bash
 
         func_AptBasics(){
             apt update
