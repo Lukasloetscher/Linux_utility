@@ -83,14 +83,14 @@
 
                 func_GitSettings(){
                     #git set up.
-                    sudo -u $SUDO_USER bash -c "git config --global user.name "Lukas Loetscher""
-                    sudo -u $SUDO_USER bash -c "git config --global user.email "Lukas@Loetscher.swiss""
+                    sudo -u $SUDO_USER bash -c "git config --global user.name 'Lukas Loetscher'"
+                    sudo -u $SUDO_USER bash -c "git config --global user.email 'Lukas@Loetscher.swiss'"
                     #makes it the default that git wants to merge stuff in case of missing changes.
                     sudo -u $SUDO_USER bash -c "git config pull.rebase false"
                 }
 
                 func_GIT_SSHKeyForGithub(){
-                    sudo -u $SUDO_USER bash -c "ssh-keygen -t ed25519 -C "lukas@loetscher.swiss" -f /home/$USER/.ssh/github_ssh_key -N """
+                    sudo -u $SUDO_USER bash -c "ssh-keygen -t ed25519 -C 'lukas@loetscher.swiss' -f /home/$USER/.ssh/github_ssh_key -N ''"
                     cp /home/$SUDO_USER/.ssh/github_ssh_key.pub /home/$SUDO_USER/Desktop/ssh_key_for_github.pub
                     echo "please paste the pub key into github."
                 }
@@ -115,5 +115,7 @@ func_Docker
 func_GIT
 
 #last we want to reboot the device.
+apt autoremove
 echo 'please reboot the device'
 #reboot now
+
