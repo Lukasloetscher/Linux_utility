@@ -115,7 +115,7 @@ func_Docker
 func_GIT
 
 #last we want to reboot the device.
-apt autoremove
+apt autoremove -y
 echo 'please reboot the device'
 #reboot now
 
