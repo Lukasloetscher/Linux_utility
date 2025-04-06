@@ -57,6 +57,8 @@
                     sudo -u $SUDO_USER bash -c "code --install-extension ms-azuretools.vscode-docker"
                     sudo -u $SUDO_USER bash -c "code --install-extension ms-vscode.cpptools"
                     sudo -u $SUDO_USER bash -c "code --install-extension foxundermoon.shell-format"
+                    sudo -u $SUDO_USER bash -c "code --install-extension vscjava.vscode-java-pack"
+                    
 
 
                 }
