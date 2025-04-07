@@ -88,7 +88,7 @@
                     sudo -u $SUDO_USER bash -c "git config --global user.name 'Lukas Loetscher'"
                     sudo -u $SUDO_USER bash -c "git config --global user.email 'Lukas@Loetscher.swiss'"
                     #makes it the default that git wants to merge stuff in case of missing changes.
-                    sudo -u $SUDO_USER bash -c "git config pull.rebase false"
+                    sudo -u $SUDO_USER bash -c "git config --global pull.rebase false"
                 }
 
                 func_GIT_SSHKeyForGithub(){
