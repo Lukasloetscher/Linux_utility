@@ -39,7 +39,7 @@
                 }
 
                 func_javaSetuputility(){
-                    apt install openjdk-17-jdk -y
+                    apt install openjdk-21-jdk -y
                     apt install maven -y
 
                     func_javaSetUpProfile
