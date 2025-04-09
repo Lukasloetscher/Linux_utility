@@ -27,6 +27,9 @@
                     apt install snapd -y
                     snap install eclipse --classic
 
+                    sudo snap install intellij-idea-community --classic
+
+
                 }
 
                 func_javaSetUpProfile(){
